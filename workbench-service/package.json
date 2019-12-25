@@ -1,0 +1,36 @@
+{
+  "name": "@mc/work",
+  "version": "0.0.1",
+  "description": "fe-workbench",
+  "main": "bin/index.js",
+  "bin": {
+    "workbench": "bin/index.js"
+  },
+  "scripts": {
+    "startNode": "nodemon --watch routers --watch tools --watch libs --watch index.js ./index.js",
+    "serve": "cross-env NODE_ENV=development npm run startNode",
+    "start": "pm2 start ./config/ecosystem.config.js",
+    "publish": "npm --registry=https://registrymnpm.yunshanmeicai.com publish",
+    "push": "mnpm publish"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.2",
+    "lowdb": "^1.0.0",
+    "meow": "^5.0.0",
+    "opener": "^1.5.1",
+    "ora": "^4.0.3",
+    "shelljs": "^0.8.2"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.18.4"
+  }
+}
